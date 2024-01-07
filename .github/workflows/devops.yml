@@ -1,6 +1,6 @@
 name: Python application test with Github Actions
 
-on:[push]
+on: [push]
   # push:
     # branches: [ "master" ]
   # pull_request:
