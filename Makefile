@@ -13,4 +13,4 @@ test:
 deploy:
 	# deploy
 
-all: install format lint
+all: install format
