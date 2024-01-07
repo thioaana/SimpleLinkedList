@@ -16,6 +16,6 @@ jobs:
       with: 
         python-version: 3.8
 
-    - name: Install dependencies
+    - name: Makefile
       run: make all
 
