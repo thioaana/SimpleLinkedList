@@ -1,17 +1,16 @@
 install:
 	pip install --upgrade pip && pip install -r requirements.txt
 
-format :
-    # format
+format:
+	black *.py
 
-lint :
-    # pylint
+lint:
+	pylint
 
-test :
-    # test
+test:
+	# test
 
-deploy :
-    # deploy
+deploy:
+	# deploy
 
-all :
-    # install, lint
+all: install format lint
