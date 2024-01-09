@@ -8,7 +8,7 @@ lint:
 	pylint
 
 test:
-	# test
+	pytest -v
 
 deploy:
 	# deploy
