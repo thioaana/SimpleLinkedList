@@ -56,7 +56,7 @@ class LinkedList:
 
         initial_node = self.__head
         self.__head = initial_node.getNext()
-        return initial
+        return initial_node
 
     def printList(self):
         current = self.__head
@@ -64,18 +64,3 @@ class LinkedList:
             print(current.getData())
             current = current.getNext()
 
-# Press the green button in the gutter to run the script.
-if __name__ == "__main__":
-    myList = LinkedList()
-    print(f'Is Linked List empty ? {myList.isEmpty()}')
-
-    myList.push('A')
-    myList.printList()
-    myList.push('B')
-    print(f'Is Linked List empty ? {myList.isEmpty()}')
-    myList.printList()
-    myList.push('C')
-    myList.printList()
-    print(myList.size())
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

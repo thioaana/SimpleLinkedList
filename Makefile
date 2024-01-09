@@ -2,7 +2,7 @@ install:
 	pip install --upgrade pip && pip install -r requirements.txt
 
 format:
-	black *.py
+	black src/*.py tests/*.py
 
 lint:
 	pylint
@@ -13,4 +13,4 @@ test:
 deploy:
 	# deploy
 
-all: install format
+all: install format test
