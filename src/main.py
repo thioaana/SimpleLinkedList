@@ -58,9 +58,16 @@ class LinkedList:
         self.__head = initial_node.getNext()
         return initial_node
 
-    def printList(self):
+    def extractList(self):
+        s = ""
         current = self.__head
         while current is not None:
-            print(current.getData())
+            s += f"{current.getData()}\n"
             current = current.getNext()
+        return s
 
+
+if __name__ == "__main__":
+    myList = LinkedList()
+    myList.pop()
+    print(f"---\n{myList.extractList()}\n---")
