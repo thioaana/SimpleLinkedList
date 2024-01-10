@@ -63,9 +63,9 @@ class LinkedList:
         Insert a new node in the end of the list
         """
         current = self.__head
-        if current is None :
+        if current is None:
             self.push(new_data)
-        else :
+        else:
             while current.getNext() is not None:
                 current = current.getNext()
 
