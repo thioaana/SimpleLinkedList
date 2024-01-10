@@ -73,6 +73,16 @@ class LinkedList:
             current.setNext(new_node)
             new_node.setNext(None)
 
+    def search(self, data):
+        current = self.__head
+
+        while current is not None:
+            if current.getData() == data :
+                return True
+            else:
+                current = current.getNext()
+        return False
+
     def extractList(self):
         s = ""
         current = self.__head

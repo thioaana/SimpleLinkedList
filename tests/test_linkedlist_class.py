@@ -73,6 +73,26 @@ class TestLinkedList:
             expected_result = scenario[-1]
             assert myList.extractList() == expected_result
 
+
+    def testSearch(self):
+        scenarios = [
+            (("pop",), False),
+            (("push", "A"), True),
+            (("push", "A"), ("append", "B"), True),
+            (("push", "D"), ("append", "B"), False),
+            (("push", "A"), ("append", "B"), ("pop",), ("append", "C"), ("push", "D"), ("pop",), False),
+        ]
+
+        for scenario in scenarios:
+            myList = LinkedList()
+            for method_name, *args in scenario[:-1]:
+                method = getattr(myList, method_name)
+                method(*args)
+
+            expected_result = scenario[-1]
+            assert myList.search('A') == expected_result
+
+
     def testSizeCalculation(self):
         scenarios = [
             (("push", "A"), ("pop",), 0),
