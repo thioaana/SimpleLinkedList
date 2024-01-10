@@ -58,6 +58,21 @@ class LinkedList:
         self.__head = initial_node.getNext()
         return initial_node
 
+    def append(self, new_data):
+        """
+        Insert a new node in the end of the list
+        """
+        current = self.__head
+        if current is None :
+            self.push(new_data)
+        else :
+            while current.getNext() is not None:
+                current = current.getNext()
+
+            new_node = Node(new_data)
+            current.setNext(new_node)
+            new_node.setNext(None)
+
     def extractList(self):
         s = ""
         current = self.__head
