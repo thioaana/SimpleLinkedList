@@ -64,10 +64,11 @@ class LinkedList:
         while current is not None:
             s += f"{current.getData()}\n"
             current = current.getNext()
+        s = s[:-1]
         return s
 
 
 if __name__ == "__main__":
     myList = LinkedList()
-    myList.pop()
+    # myList.push('A')
     print(f"---\n{myList.extractList()}\n---")
